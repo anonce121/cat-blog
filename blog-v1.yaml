@@ -10,8 +10,8 @@ metadata:
     io.kubernetes.cri-o.SandboxID/web: e03886962185a4584b5c4e6a306ba8298b8ae33b50d38a94eecc9a579d84e355
   creationTimestamp: "2025-08-19T02:07:42Z"
   labels:
-    app: blog
-  name: blog
+    app: cat-blog-v1
+  name: cat-blog-v1
 spec:
   containers:
   - args:
