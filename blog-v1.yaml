@@ -1,0 +1,25 @@
+# Save the output of this file and use kubectl create -f to import
+# it into Kubernetes.
+#
+# Created with podman-5.4.0
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    io.kubernetes.cri-o.SandboxID/db: e03886962185a4584b5c4e6a306ba8298b8ae33b50d38a94eecc9a579d84e355
+    io.kubernetes.cri-o.SandboxID/web: e03886962185a4584b5c4e6a306ba8298b8ae33b50d38a94eecc9a579d84e355
+  creationTimestamp: "2025-08-19T02:07:42Z"
+  labels:
+    app: blog
+  name: blog
+spec:
+  containers:
+  - args:
+    - postgres
+    image: docker.io/anonce121/testt:db-v1
+    name: db
+    ports:
+    - containerPort: 8080
+      hostPort: 80
+  - image: docker.io/anonce121/testt:web-v1
+    name: web
